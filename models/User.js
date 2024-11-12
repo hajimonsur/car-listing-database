@@ -23,6 +23,11 @@ const UserSchema = new mongoose.Schema({
     favorite: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Car" }],
+
+     createdAt: {
+        type: Date,
+        default: Date.now
+     }   
 });
 
 module.exports = mongoose.model("User", UserSchema);
